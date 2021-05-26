@@ -304,7 +304,7 @@ define([
 
     onMediaElementPlay(event) {
       this.queueGlobalEvent('play');
-
+        console.log("I have started playing");
       Adapt.trigger('media:stop', this);
 
       if (this.model.get('_pauseWhenOffScreen')) $(this.mediaElement).on('inview', this.onMediaElementInview);
