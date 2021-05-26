@@ -305,7 +305,7 @@ console.log("hello");
 
     onMediaElementPlay(event) {
       this.queueGlobalEvent('play');
-      console.log("I have started playing");
+
       Adapt.trigger('media:stop', this);
 
       if (this.model.get('_pauseWhenOffScreen')) $(this.mediaElement).on('inview', this.onMediaElementInview);
@@ -314,7 +314,12 @@ console.log("hello");
         '_isMediaPlaying': true,
         '_isMediaEnded': false
       });
+        
 console.log("I have started playing");
+        const player = this.mediaElement.player;
+        const currenttime = player.getCurrentTime();
+        console.log(currenttime);
+        
       if (this.completionEvent === 'play') {
         this.setCompletionStatus();
       }
@@ -322,7 +327,7 @@ console.log("I have started playing");
 
     onMediaElementPause(event) {
       this.queueGlobalEvent('pause');
-console.log("I have started playing");
+
       $(this.mediaElement).off('inview', this.onMediaElementInview);
 
       this.model.set('_isMediaPlaying', false);
