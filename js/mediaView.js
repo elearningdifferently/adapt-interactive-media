@@ -36,6 +36,7 @@ define([
    * is a duration integer the other is the player object. The default functions error on slider key press and so break
    * accessibility. Below is a correction.
    */
+console.log("hello");    
 
   Object.assign(window.mejs.MepDefaults, {
     keyActions: [],
@@ -304,7 +305,7 @@ define([
 
     onMediaElementPlay(event) {
       this.queueGlobalEvent('play');
-        console.log("I have started playing");
+      console.log("I have started playing");
       Adapt.trigger('media:stop', this);
 
       if (this.model.get('_pauseWhenOffScreen')) $(this.mediaElement).on('inview', this.onMediaElementInview);
@@ -313,7 +314,7 @@ define([
         '_isMediaPlaying': true,
         '_isMediaEnded': false
       });
-
+console.log("I have started playing");
       if (this.completionEvent === 'play') {
         this.setCompletionStatus();
       }
@@ -321,7 +322,7 @@ define([
 
     onMediaElementPause(event) {
       this.queueGlobalEvent('pause');
-
+console.log("I have started playing");
       $(this.mediaElement).off('inview', this.onMediaElementInview);
 
       this.model.set('_isMediaPlaying', false);
