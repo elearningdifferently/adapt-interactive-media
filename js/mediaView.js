@@ -594,7 +594,7 @@ define([
 
       if (player) eventObj.isVideo = player.isVideo;
 
-      Adapt.trigger('media', eventObj);
+      Adapt.trigger('interactivemedia', eventObj);
     }
   }
 
