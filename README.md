@@ -1,4 +1,4 @@
-# adapt-contrib-media  
+# adapt-interactive-media  
 
 <img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/media02.gif" alt="image of media component" align="right">  
 
@@ -10,7 +10,7 @@ The component uses [MediaElement.js (v2.21.2)](http://mediaelementjs.com/), a pl
 
 Whilst the underlying MediaElement player does have support for playing both YouTube and Vimeo videos, this no longer works very well due to changes in the YouTube/Vimeo player APIs - it is therefore strongly suggested you use the dedicated [YouTube](https://github.com/adaptlearning/adapt-youtube) / [Vimeo](https://github.com/adaptlearning/adapt-contrib-vimeo) components instead.
 
-[Visit the **Media** wiki](https://github.com/adaptlearning/adapt-contrib-media/wiki) for more information about its functionality and for explanations of key properties.  
+[Visit the **Media** wiki](https://github.com/adaptlearning/adapt-interactive-media/wiki) for more information about its functionality and for explanations of key properties.  
 
 ## Installation
 
@@ -18,11 +18,11 @@ As one of Adapt's *[core components](https://github.com/adaptlearning/adapt_fram
 
 * If **Media** has been uninstalled from the Adapt framework, it may be reinstalled. With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run the following from the command line:
 	```console
-	adapt install adapt-contrib-media
+	adapt install adapt-interactive-media
 	```
   Alternatively, this component can also be installed by adding the following line of code to the *adapt.json* file:
 	```json
-	"adapt-contrib-media": "*"
+	"adapt-interactive-media": "*"
 	```
   Then running the command:
 	```console
@@ -35,14 +35,14 @@ As one of Adapt's *[core components](https://github.com/adaptlearning/adapt_fram
 
 ## Settings Overview
 
-The attributes listed below are used in *components.json* to configure **Media**, and are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-media/blob/master/example.json). Visit the [**Media** wiki](https://github.com/adaptlearning/adapt-contrib-media/wiki) for more information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki). 
+The attributes listed below are used in *components.json* to configure **Media**, and are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-interactive-media/blob/master/example.json). Visit the [**Media** wiki](https://github.com/adaptlearning/adapt-interactive-media/wiki) for more information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki). 
 
 ## Attributes
 
 [**core model attributes**](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes): These are inherited by every Adapt component. [Read more](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes).
 
 ### \_component (string):
-This must be set to `"media"`.
+This must be set to `"interactivemedia"`.
 
 ### \_classes (string):
 CSS class name(s) to be applied to this component’s containing `div`. The class(es) must be predefined in one of the Less files. Separate multiple classes with a space.
@@ -144,13 +144,13 @@ This text appears on the button that links to the optional external transcript. 
 File name (including path) of the optional external transcript. Path should be relative to the `src` folder (e.g., `"course/en/pdf/video01_transcript.pdf"`).
 
 ### \_playerOptions (object):
-This optional object can be used to customize the player. See [*example.json*](https://github.com/adaptlearning/adapt-contrib-media/blob/master/example.json) for a list of settings. Please note: as these settings are not implemented by the Adapt community, there is no guarantee that all features and combinations thereof will be compatible with your device set up.
+This optional object can be used to customize the player. See [*example.json*](https://github.com/adaptlearning/adapt-interactive-media/blob/master/example.json) for a list of settings. Please note: as these settings are not implemented by the Adapt community, there is no guarantee that all features and combinations thereof will be compatible with your device set up.
 
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ### JSON Examples  
 
-The attributes described above focus on the component's use with standard video. They are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-media/blob/master/example.json) The same model can be applied to the component's use with audio and YouTube videos.  
+The attributes described above focus on the component's use with standard video. They are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-interactive-media/blob/master/example.json) The same model can be applied to the component's use with audio and YouTube videos.  
 
 #### Standard video example:
 ```json
@@ -186,7 +186,7 @@ Note: it is strongly suggested you use the dedicated [Vimeo component](https://g
 ```  
 
 ### Accessibility
-The media component has two elements that have been assigned a label using the [aria-label](https://github.com/adaptlearning/adapt_framework/wiki/Aria-Labels) attribute: `"ariaRegion"` and `"skipToTranscript"`. These labels are not visible elements. They are utilized by assistive technology such as screen readers. Should the labels need to be customised or localised, they can be found within the `globals` object in [*properties.schema*](https://github.com/adaptlearning/adapt-contrib-media/blob/master/properties.schema).   
+The media component has two elements that have been assigned a label using the [aria-label](https://github.com/adaptlearning/adapt_framework/wiki/Aria-Labels) attribute: `"ariaRegion"` and `"skipToTranscript"`. These labels are not visible elements. They are utilized by assistive technology such as screen readers. Should the labels need to be customised or localised, they can be found within the `globals` object in [*properties.schema*](https://github.com/adaptlearning/adapt-interactive-media/blob/master/properties.schema).   
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ## Events
@@ -209,7 +209,7 @@ Although [Adobe Flash Player has now reached End of Life](https://www.adobe.com/
 ----------------------------
 **Version number:**  5.1.0  <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
 **Framework versions:** 5.5+  
-**Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-media/graphs/contributors)  
+**Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-interactive-media/graphs/contributors)  
 **Accessibility support:** WAI AA  
 **RTL support:** Yes  
 **Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 14 for macOS/iOS/iPadOS, Opera  
